@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_macro">
+    <sys_ui_macro action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category>general</category>
+        <description/>
+        <media_type/>
+        <name>EstimateButtons</name>
+        <scoped_name>x_550467_estimate_EstimateButtons</scoped_name>
+        <sys_class_name>sys_ui_macro</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-07 08:44:51</sys_created_on>
+        <sys_id>9d54be391b9b0110c343877ddc4bcb0b</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>EstimateButtons</sys_name>
+        <sys_package display_value="Estimate" source="x_550467_estimate">9db052b11b1b0110c343877ddc4bcb5d</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Estimate">9db052b11b1b0110c343877ddc4bcb5d</sys_scope>
+        <sys_update_name>sys_ui_macro_9d54be391b9b0110c343877ddc4bcb0b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-07 08:57:01</sys_updated_on>
+        <xml><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+	<g2:evaluate var="jvar_showEstimateButtons">
+		var util = new x_550467_estimate.EstimateUtil(g_form.getUniqueValue(),g_user.userID);
+		var answer = util.validStory();
+		answer;
+	</g2:evaluate>
+	<g2:evaluate>
+		var buttons = util.validAnswers();
+	</g2:evaluate>
+		
+	<j2:if test="$[jvar_showEstimateButtons]">
+		<j2:foreach var="jvar_buttons" items="${buttons}">
+			<button id="button_${jvar_buttons}" />
+		</j2:foreach>
+	</j2:if>
+</j:jelly>]]></xml>
+    </sys_ui_macro>
+</record_update>

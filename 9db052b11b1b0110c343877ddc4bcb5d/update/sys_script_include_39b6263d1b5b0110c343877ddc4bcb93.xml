@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_550467_estimate.EstimateUtil</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>EstimateUtil</name>
+        <script><![CDATA[var EstimateUtil = Class.create();
+
+EstimateUtil.answers = [0, 1, 2, 3, 5, 8, 13, 20, 40, 100];
+EstimateUtil.story = '';
+EstimateUtil.user = '';
+
+EstimateUtil.prototype = {
+    initialize: function(story, user) {
+        this.story = story;
+        this.user = user;
+    },
+	
+	validAnswers: function() {
+		return this.answers;
+	},
+
+    validStory: function() {
+        var grStory = new GlideRecord("rm_story");
+        grStory.addEncodedQuery("sys_id=" + this.story + "^state=-6");
+        grStory.query();
+        if (grStory.next()) {
+            return true;
+        } else {
+            return false;
+        }
+    },
+
+    getEstimate: function() {
+        var response = {
+            sysid: "",
+            value: 0
+        };
+        var grM2m = this._getEstimateRecord();
+        if (grM2m.next()) {
+            response.sysid = grM2m.getUniqueValue();
+            response.value = grM2m.estimate.toString();
+        }
+        return response;
+    },
+
+    setEstimate: function(estimate) {
+        var grM2m = this._getEstimateRecord();
+        if (!grM2m.next()) {
+            grM2m.initialize();
+            grM2m.story = this.story;
+            grM2m.user = this.user;
+        }
+        grM2m.estimate = parseInt(estimate, 10);
+		grM2m.update();
+    },
+
+    _getEstimateRecord: function() {
+        var grM2m = new GlideRecord('x_550467_estimate_m2m_users_stories');
+        grM2m.addEncodedQuery("story=" + this.story + "^user=" + this.user);
+        grM2m.query();
+		return grM2m;
+    },
+
+    type: 'EstimateUtil'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-05-07 08:18:22</sys_created_on>
+        <sys_id>39b6263d1b5b0110c343877ddc4bcb93</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>EstimateUtil</sys_name>
+        <sys_package display_value="Estimate" source="x_550467_estimate">9db052b11b1b0110c343877ddc4bcb5d</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Estimate">9db052b11b1b0110c343877ddc4bcb5d</sys_scope>
+        <sys_update_name>sys_script_include_39b6263d1b5b0110c343877ddc4bcb93</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-05-07 08:54:41</sys_updated_on>
+    </sys_script_include>
+</record_update>

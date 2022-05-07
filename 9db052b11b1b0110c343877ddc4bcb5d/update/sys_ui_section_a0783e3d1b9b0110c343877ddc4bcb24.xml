@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="Estimation" section_id="a0783e3d1b9b0110c343877ddc4bcb24" sys_domain="global" table="rm_story" version="3" view="scrum">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-05-07 09:03:39</sys_created_on>
+            <sys_id>ebb8f63d1b9b0110c343877ddc4bcbe4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Estimation" display_value="Estimation" name="rm_story" sys_domain="global" view="faee86fd1bd70110c343877ddc4bcb67">a0783e3d1b9b0110c343877ddc4bcb24</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-05-07 09:03:39</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>EstimateButtons.xml</element>
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-05-07 09:03:39</sys_created_on>
+            <sys_id>6fb8f63d1b9b0110c343877ddc4bcbe4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter display_value="EstimateButtons">c6a7fef91b9b0110c343877ddc4bcb22</sys_ui_formatter>
+            <sys_ui_section caption="Estimation" display_value="Estimation" name="rm_story" sys_domain="global" view="faee86fd1bd70110c343877ddc4bcb67">a0783e3d1b9b0110c343877ddc4bcb24</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-05-07 09:03:39</sys_updated_on>
+            <sys_user/>
+            <type>component</type>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption>Estimation</caption>
+            <header>false</header>
+            <name>rm_story</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-05-07 09:02:22</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>a0783e3d1b9b0110c343877ddc4bcb24</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>rm_story</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Estimate" source="x_550467_estimate">9db052b11b1b0110c343877ddc4bcb5d</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Estimate">9db052b11b1b0110c343877ddc4bcb5d</sys_scope>
+            <sys_update_name>sys_ui_section_a0783e3d1b9b0110c343877ddc4bcb24</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-05-07 09:02:22</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Scrum" name="scrum">faee86fd1bd70110c343877ddc4bcb67</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>
